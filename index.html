@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Life in Weeks</title>
+  </head>
+
+  <body bgcolor="#FFEAD2">
+  <center>
+    <h1>Your Life In Weeks </h1>
+  </center>
+      <center>
+      <img src="https://media.tenor.com/m_QVXnv-XlgAAAAM/thinking-emoji.gif" width="350" height="230">
+      </center>
+      <br>
+      <br>
+      <br>
+      <h1><b><center>Enter your age:<input type="number" id="Age" name="Age" style="width: 200px;">
+        <button onclick="calculate()"<h1 style="background-color: #ffef96;">Calculate</button>
+        <br>
+        <br>
+        <span id="days"></span>
+        <span id="weeks"></span>
+        <span id="months"></span>
+
+    </center>
+    <br>
+    <br>
+    <br>
+
+    <script>
+      function LifeInWeeks(age) {
+        const DaysLeft = (90 - age) * 365;
+        const WeeksLeft = (90 - age) * 52;
+        const MonthsLeft = (90 - age) * 12;
+        document.getElementById("days").textContent = "You have " + DaysLeft + " days, " + WeeksLeft + " weeks, and " + MonthsLeft + " months left!";
+      }
+      function calculate() {
+        const ageInput = document.getElementById("Age").value;
+        const age = parseInt(ageInput);
+        if (age <= 0) {
+          alert("Please enter a VALID age.");
+          return;
+        } else if (age > 90) {
+          alert("You have exceeded the maximum age of 90.");
+          return;
+        }
+        LifeInWeeks(age);
+      }
+
+    </script>
+    <center></b></h1>
+
+
+  <body>
+
+  </body>
+</html>
